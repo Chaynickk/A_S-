@@ -9,23 +9,6 @@ from tkinter import filedialog
 from PIL import ImageGrab, ImageTk
 from PIL import Image
 
-#задержка, точность, нажать
-
-#pyautogui.press('esc')
-
-#pyautogui.press("win")
-
-#pyautogui.click(173, 1059)
-
-#file_path1 = 'Scrins/a.txt'
-#with open(file_path1, 'r+', encoding='utf-8') as f:
-# num = int(f.read())
-#f.close()
-
-#with open(file_path1, 'r+', encoding='utf-8') as f:
-#        f.write(str(num))
-#    f.close()
-
 def click_png(name, s_time, toch, pres):
     root.withdraw()
     while 1:
@@ -51,7 +34,6 @@ def open_file():
 def load_image_noob():
     global choice_now
     global photo_image
-#   global file_path1
     file_path = filedialog.askopenfilename()
     try:
         image = Image.open(file_path)
@@ -70,7 +52,6 @@ def load_image_noob():
 def load_image_pro(a):
     global choice_now
     global photo_image
-#   global file_path1
     try:
         im = ImageGrab.grabclipboard()
         im.save(f'Scrins/image{arr_button[choice_now]}.png','PNG')
@@ -98,14 +79,14 @@ def save_sett():
     except:
         may = False
         win_error = Tk()
-        lable_error = Label(win_error, text = 'В задержку надо ввести число', font='Verdana 12')
+        lable_error = Label(win_error, text = 'Р’ Р·Р°РґРµСЂР¶РєСѓ РЅР°РґРѕ РІРІРµСЃС‚Рё С‡РёСЃР»Рѕ', font='Verdana 12')
         win_error.geometry('480x270')
         lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)    
     try:
         if float(acc_entry.get()) > 1:
             may = False
             win_error = Tk()
-            lable_error = Label(win_error, text = 'В точность надо ввести число меньше 1', font='Verdana 12')
+            lable_error = Label(win_error, text = 'Р’ С‚РѕС‡РЅРѕСЃС‚СЊ РЅР°РґРѕ РІРІРµСЃС‚Рё С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ 1', font='Verdana 12')
             win_error.geometry('480x270')
             lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)
         else:    
@@ -113,18 +94,18 @@ def save_sett():
     except:
         may = False
         win_error = Tk()
-        lable_error = Label(win_error, text = 'В точность надо ввести число меньше 1', font='Verdana 12')
+        lable_error = Label(win_error, text = 'Р’ С‚РѕС‡РЅРѕСЃС‚СЊ РЅР°РґРѕ РІРІРµСЃС‚Рё С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ 1', font='Verdana 12')
         win_error.geometry('480x270')
         lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)       
     try:
-        a = 'йцукенгшщзхъэждлорпавыфячсмитьбю1234567890'
+        a = 'Р№С†СѓРєРµРЅРіС€С‰Р·С…СЉСЌР¶РґР»РѕСЂРїР°РІС‹С„СЏС‡СЃРјРёС‚СЊР±СЋ1234567890'
         c = True
         for i in range(len(a)):
             for j in range(len(key_entry.get())):
                 if a[i] == key_entry.get()[j]:
                     may = False
                     win_error = Tk()
-                    lable_error = Label(win_error, text = 'В .НАЖАТЬ. надо\n вести английсую букуву', font='Verdana 12')
+                    lable_error = Label(win_error, text = 'Р’ .РќРђР–РђРўР¬. РЅР°РґРѕ\n РІРµСЃС‚Рё Р°РЅРіР»РёР№СЃСѓСЋ Р±СѓРєСѓРІСѓ', font='Verdana 12')
                     win_error.geometry('480x270')
                     lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)
                     c = False
@@ -136,7 +117,7 @@ def save_sett():
     except:
         may = False
         win_error = Tk()
-        lable_error = Label(win_error, text = 'В .НАЖАТЬ. надо ввести английсую букуву', font='Verdana 12')
+        lable_error = Label(win_error, text = 'Р’ .РќРђР–РђРўР¬. РЅР°РґРѕ\n РІРµСЃС‚Рё Р°РЅРіР»РёР№СЃСѓСЋ Р±СѓРєСѓРІСѓ', font='Verdana 12')
         win_error.geometry('480x270')
         lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)
     if may == True:
@@ -146,7 +127,7 @@ def save_sett():
             arr_button[choice_now+3] = key
         except:
             win_error = Tk()
-            lable_error = Label(win_error, text = 'Выбран неверный шаг', font='Verdana 12')
+            lable_error = Label(win_error, text = 'Р’С‹Р±СЂР°РЅ РЅРµРІРµСЂРЅС‹Р№ С€Р°Рі', font='Verdana 12')
             win_error.geometry('480x270')
             lable_error.place(relx=0, rely=0, relwidth=1, relheight=1)
             
@@ -268,31 +249,31 @@ frame_image.place(relx=0.35, rely=0.15, relwidth=0.55, relheight=0.55)
 frame_arr = Frame(root, bg='#54784c')
 frame_arr.place(relx=0.05, rely=0.15, relwidth=0.2, relheight=0.7)
 
-image_button = Button(root, text="Выбрать\nизоброжение", command=load_image_noob, bg='#54784c', font='Verdana 12', fg = '#dde8da')
+image_button = Button(root, text="Р’С‹Р±СЂР°С‚СЊ\nРёР·РѕР±СЂРѕР¶РµРЅРёРµ", command=load_image_noob, bg='#54784c', font='Verdana 12', fg = '#dde8da')
 image_button.place(relx=0.35, rely=0.825, relwidth=0.15, relheight=0.1)
 
 creat_button = Button(root, text="+", command=creat_button, bg='#54784c', font='Verdana 12', fg = '#dde8da')
 creat_button.place(relx=0.02, rely=0.15, relwidth=0.03, relheight=0.05)
 
-start_button = Button(root, command=start, text="Начать", bg='#54784c', font='Verdana 12', fg = '#dde8da')
+start_button = Button(root, command=start, text="РќР°С‡Р°С‚СЊ", bg='#54784c', font='Verdana 12', fg = '#dde8da')
 start_button.place(relx=0.1, rely=0.89, relwidth=0.1, relheight=0.075)
 
 del_entry = Entry(root, bg='white')
 del_entry.place(relx=0.7, rely=0.775, relwidth=0.03, relheight=0.05)
-del_label = Label(text = 'Задержка:', font='Verdana 12', bg='#273823', fg = '#dde8da')
+del_label = Label(text = 'Р—Р°РґРµСЂР¶РєР°:', font='Verdana 12', bg='#273823', fg = '#dde8da')
 del_label.place(relx=0.59, rely=0.775, relwidth=0.1, relheight=0.05)
 
 acc_entry = Entry(root, bg='white')
 acc_entry.place(relx=0.7, rely=0.85, relwidth=0.03, relheight=0.05)
-acc_label = Label(text = 'Точность:', font='Verdana 12', bg='#273823', fg = '#dde8da')
+acc_label = Label(text = 'РўРѕС‡РЅРѕСЃС‚СЊ:', font='Verdana 12', bg='#273823', fg = '#dde8da')
 acc_label.place(relx=0.592, rely=0.85, relwidth=0.1, relheight=0.05)
 
 key_entry = Entry(root, bg='white')
 key_entry.place(relx=0.7, rely=0.925, relwidth=0.03, relheight=0.05)
-key_label = Label(text = 'Нажать:', font='Verdana 12', bg='#273823', fg = '#dde8da')
+key_label = Label(text = 'РќР°Р¶Р°С‚СЊ:', font='Verdana 12', bg='#273823', fg = '#dde8da')
 key_label.place(relx=0.6, rely=0.925, relwidth=0.1, relheight=0.05)
 
-save_button = Button(root, text = 'Сохранть', command = save_sett,bg='#54784c', font='Verdana 12', fg = '#dde8da')
+save_button = Button(root, text = 'РЎРѕС…СЂР°РЅС‚СЊ', command = save_sett,bg='#54784c', font='Verdana 12', fg = '#dde8da')
 save_button.place(relx=0.8, rely=0.835, relwidth=0.1, relheight=0.08)
 
 
