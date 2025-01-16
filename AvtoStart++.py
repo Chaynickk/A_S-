@@ -1,4 +1,4 @@
-# coding=windows-1251
+
 import pyautogui
 import time
 import os
@@ -209,7 +209,7 @@ def creat_button():
 def start():
     for i in range(len(arr_button)):
         if i == 0 or i % 6 == 0:
-            click_png(f"Scrins/image{arr_button[i+2]}.png",arr_button[i+3],arr_button[i+4],arr_button[i+5])
+            click_png(f"Scrins/image{arr_button[i+2]}.png", arr_button[i+3], arr_button[i+4], arr_button[i+5])
             
 ##################################################################################################################
 
